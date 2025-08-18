@@ -1,3 +1,6 @@
+
+const CampanhaAntirracismo = require("../models/modelCampanhaAntirracismo"); 
+
 // Array para simular um "banco de dados" temporário
 let denuncias = [];
 // Função para listar todas as denúncias
