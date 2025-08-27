@@ -1,60 +1,72 @@
-# 📦 PF-M4
+📦 PF-M4
 
-Breve descrição do projeto: o que ele faz, qual problema resolve e para quem é destinado.  
-Exemplo: "API para gerenciamento de produtos e avaliações de clientes, desenvolvida em Node.js seguindo o padrão MVC."
+API para gerenciamento de denúncias antirracismo, desenvolvida em Node.js seguindo o padrão MVC.
+O objetivo é oferecer uma estrutura organizada para cadastrar, listar, atualizar e remover denúncias de forma simples e escalável.
 
----
+Destinado a desenvolvedores e aplicações que necessitam de uma API REST básica para manipulação de dados de denúncias.
 
-## 🏗️ Arquitetura MVC
-Este projeto segue a arquitetura **Model-View-Controller (MVC)**:
+🏗️ Arquitetura MVC
 
-- **Model**: responsável pela comunicação com o banco de dados.  
-- **View**: neste projeto, pode ser apenas a resposta em JSON para o cliente.  
-- **Controller**: contém a lógica da aplicação e recebe as requisições.  
-- **Routes**: direcionam as requisições para os controllers corretos.  
+Este projeto segue a arquitetura Model-View-Controller (MVC):
 
-## 📂 Estrutura de pastas do projeto
+Model → responsável pela estrutura dos dados e interação com o "banco de dados" (inicialmente um array).
 
-```bash
+View → neste projeto, são as respostas em JSON enviadas ao cliente.
+
+Controller → contém a lógica da aplicação (criar, listar, atualizar, deletar denúncias).
+
+Routes → direcionam as requisições para os controllers corretos.
+
+📂 Estrutura de pastas do projeto
 📂 PF-M4
- ┃ ┣ 📂 controllers   # Lógica das requisições
- ┃ ┣ 📂 models        # Estruturas e banco de dados
- ┃ ┣ 📂 routes        # Definição das rotas
- ┃ ┣ 📂 views         # (opcional) Renderização ou respostas
- ┃ ┗ 📜 app.js        # Arquivo principal
+ ┣ 📂 controllers   # Lógica das requisições (denúncias)
+ ┣ 📂 models        # Estruturas e simulação do banco de dados
+ ┣ 📂 routes        # Definição das rotas
+ ┣ 📂 views         # (opcional) Respostas em JSON
+ ┗ 📜 app.js        # Arquivo principal da aplicação
  ┣ 📜 package.json
  ┗ 📜 README.md
-```
----
 
-## 🚀 Tecnologias utilizadas
-- [Node.js](https://nodejs.org/)  
-- [Express](https://expressjs.com/)  
-- [Nodemon](https://nodemon.io/) (para desenvolvimento)  
+🚀 Tecnologias utilizadas
 
----
+Node.js
 
-## ⚙️ Instalação e uso
+Express
 
-### 1. Clonar o repositório
+Nodemon
+ (para desenvolvimento)
 
-```bash
-git clone https://github.com/SEU-USUARIO/NOME-DO-PROJETO.git
-cd NOME-DO-PROJETO
+⚙️ Instalação e uso
+1. Clonar o repositório
+git clone https://github.com/SEU-USUARIO/PF-M4.git
+cd PF-M4
 
+2. Instalar dependências
 npm install
 
+3. Rodar servidor em ambiente de desenvolvimento
 npm run dev
-Servidor rodando em http://localhost:3000
-```
-## 📡 Rotas principais (exemplo)
 
-| Método | Rota            | Descrição                     |
-|--------|-----------------|-------------------------------|
-| GET    | `/produtos`     | Lista todos os produtos       |
-| POST   | `/produtos`     | Cria um novo produto          |
-| PUT    | `/produtos/:id` | Atualiza produto por ID       |
-| DELETE | `/produtos/:id` | Remove produto por ID         |
 
-## :smiley_cat: Authors
-- Tábata Macedo
+Servidor rodando em: http://localhost:3000
+ 🚀
+
+📡 Rotas principais
+Método	Rota	Descrição
+GET	/denuncias	Lista todas as denúncias
+POST	/denuncias	Cria uma nova denúncia
+PUT	/denuncias/:id	Atualiza uma denúncia por ID
+DELETE	/denuncias/:id	Remove uma denúncia por ID
+😺 Authors
+
+Kauanny 
+
+Luana
+
+Ághata
+
+Erick
+
+João Pedro
+
+Júlia
