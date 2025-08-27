@@ -7,4 +7,4 @@ class CampanhaAntirracismo {
     }
 }
 
-export default CampanhaAntirracismo;
+module.exports = CampanhaAntirracismo;

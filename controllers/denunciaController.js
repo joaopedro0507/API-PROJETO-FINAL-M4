@@ -22,4 +22,4 @@ class DenunciaController {
   }
 }
 
-export default DenunciaController;
+module.exports = DenunciaController;
