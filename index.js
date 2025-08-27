@@ -13,5 +13,4 @@ app.use('/campanha', rotasCampanha);
 app.use('/denuncias', rotasDenuncias);
 
 app.listen(port, () => {
-  console.log(🚀 Servidor rodando em http://localhost:${port});
-});
+  console.log(`🚀 Servidor rodando em http://localhost:${port}`);};
