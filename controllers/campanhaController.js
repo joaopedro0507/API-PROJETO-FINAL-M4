@@ -27,7 +27,7 @@ const criarDenuncia = (req, res) => {
         denuncia: novaDenuncia
     });
 };
-module.exports = {
+export default {
     listarDenuncias,
     criarDenuncia
 };
