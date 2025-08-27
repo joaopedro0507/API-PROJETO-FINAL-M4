@@ -1,5 +1,5 @@
 
-const CampanhaAntirracismo = require("../models/CampanhaAntirracismo"); 
+const CampanhaAntirracismo = require("../models/Campanha.js"); 
 
 // Array para simular um "banco de dados" temporário
 let denuncias = [];

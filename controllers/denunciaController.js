@@ -1,4 +1,4 @@
-const DenunciaModel = require('../models/denunciaModel');
+const DenunciaModel = require('../models/denuncia.js');
 
 class DenunciaController {
   static listar(req, res) {
