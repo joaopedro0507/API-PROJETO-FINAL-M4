@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const DenunciaController = require('../controllers/denunciaController');
+const DenunciaController = require('../controllers/denunciaController').default;
 
 // Rotas CRUD
 router.get('/', DenunciaController.listar);

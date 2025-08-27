@@ -1,8 +1,8 @@
-const DenunciaModel = require('../models/denuncia.js');
+const DenunciaModel = require('.../models/denuncia.js');
 
 class DenunciaController {
   static listar(req, res) {
-    res.json(_listar());
+    res.json(DenunciaModel.listar());
   }
 
   static buscarPorId(req, res) {
