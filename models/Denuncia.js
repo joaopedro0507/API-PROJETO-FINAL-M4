@@ -24,4 +24,4 @@ class DenunciaModel {
   }
 }
 
-module.exports = DenunciaModel;
+export default DenunciaModel;
