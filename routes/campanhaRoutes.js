@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { listarDenuncias, criarDenuncia } = require('../controllers/RacismoController.js');
+const { listarDenuncias, criarDenuncia } = require('../controllers/campanhaController.js');
 const verificarDenuncia = require('../middlewares/verificarDenuncia.js');
 
 // Listar todas as denúncias de racismo
