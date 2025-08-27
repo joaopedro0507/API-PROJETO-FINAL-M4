@@ -1,23 +1,26 @@
-📦 PF-M4
 
-API para gerenciamento de denúncias antirracismo, desenvolvida em Node.js seguindo o padrão MVC.
-O objetivo é oferecer uma estrutura organizada para cadastrar, listar, atualizar e remover denúncias de forma simples e escalável.
 
-Destinado a desenvolvedores e aplicações que necessitam de uma API REST básica para manipulação de dados de denúncias.
+API para **gerenciamento de denúncias antirracismo**, desenvolvida em **Node.js** seguindo o padrão **MVC**.
+O objetivo é oferecer uma estrutura organizada para **cadastrar**, **listar**, **atualizar** e **remover denúncias** de forma simples e escalável.
 
-🏗️ Arquitetura MVC
+Destinado a desenvolvedores e aplicações que necessitam de uma **API REST básica** para manipulação de dados de denúncias.
 
-Este projeto segue a arquitetura Model-View-Controller (MVC):
+---
 
-Model → responsável pela estrutura dos dados e interação com o "banco de dados" (inicialmente um array).
+## &#x20;Arquitetura MVC
 
-View → neste projeto, são as respostas em JSON enviadas ao cliente.
+Este projeto segue a arquitetura **Model-View-Controller (MVC)**:
 
-Controller → contém a lógica da aplicação (criar, listar, atualizar, deletar denúncias).
+* **Model** → responsável pela estrutura dos dados e interação com o "banco de dados" (inicialmente um array).
+* **View** → neste projeto, são as respostas em **JSON** enviadas ao cliente.
+* **Controller** → contém a lógica da aplicação (criar, listar, atualizar, deletar denúncias).
+* **Routes** → direcionam as requisições para os controllers corretos.
 
-Routes → direcionam as requisições para os controllers corretos.
+---
 
-📂 Estrutura de pastas do projeto
+## &#x20;Estrutura de pastas do projeto
+
+```bash
 📂 PF-M4
  ┣ 📂 controllers   # Lógica das requisições (denúncias)
  ┣ 📂 models        # Estruturas e simulação do banco de dados
@@ -26,47 +29,59 @@ Routes → direcionam as requisições para os controllers corretos.
  ┗ 📜 app.js        # Arquivo principal da aplicação
  ┣ 📜 package.json
  ┗ 📜 README.md
+```
 
-🚀 Tecnologias utilizadas
+---
 
-Node.js
+## &#x20;Tecnologias utilizadas
 
-Express
+* [Node.js](https://nodejs.org/)
+* [Express](https://expressjs.com/)
+* [Nodemon](https://nodemon.io/) (para desenvolvimento)
 
-Nodemon
- (para desenvolvimento)
+---
 
-⚙️ Instalação e uso
-1. Clonar o repositório
-git clone https://github.com/SEU-USUARIO/PF-M4.git
-cd PF-M4
+## &#x20;Instalação e uso
 
-2. Instalar dependências
+### 1. Clonar o repositório
+
+```bash
+git clone https://github.com/joaopedro0507/PROJETO-FINAL-M4.git
+cd PROJETO-FINAL-M4
+```
+
+### 2. Instalar dependências
+
+```bash
 npm install
+```
 
-3. Rodar servidor em ambiente de desenvolvimento
+### 3. Rodar servidor em ambiente de desenvolvimento
+
+```bash
 npm run dev
+```
 
+Servidor rodando em: **[http://localhost:3000](http://localhost:3000)**
 
-Servidor rodando em: http://localhost:3000
- 🚀
+---
 
-📡 Rotas principais
-Método	Rota	Descrição
-GET	/denuncias	Lista todas as denúncias
-POST	/denuncias	Cria uma nova denúncia
-PUT	/denuncias/:id	Atualiza uma denúncia por ID
-DELETE	/denuncias/:id	Remove uma denúncia por ID
-😺 Authors
+## &#x20;Rotas principais
 
-Kauanny 
+| Método | Rota             | Descrição                    |
+| ------ | ---------------- | ---------------------------- |
+| GET    | `/denuncias`     | Lista todas as denúncias     |
+| POST   | `/denuncias`     | Cria uma nova denúncia       |
+| PUT    | `/denuncias/:id` | Atualiza uma denúncia por ID |
+| DELETE | `/denuncias/:id` | Remove uma denúncia por ID   |
 
-Luana
+---
 
-Ághata
+## &#x20;Authors
 
-Erick
-
-João Pedro
-
-Júlia
+* Kauanny Moreira
+* Luana
+* Ághata
+* Erick
+* João Pedro
+* Júlia
