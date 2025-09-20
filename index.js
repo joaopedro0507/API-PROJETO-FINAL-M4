@@ -7,7 +7,7 @@ const campanhaRoutes = require("./routes/campanhaRoutes");
 const denunciaRoutes = require("./routes/denunciaRoutes");
 
 app.use(express.json());
-
+//Comentário teste
 // Rota raiz
 app.get("/", (req, res) => {
   res.send("🚀 API Antirracismo está online!");
