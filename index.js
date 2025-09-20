@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 // Prefixos das rotas
 app.use("/campanhas", campanhaRoutes);
 app.use("/denuncias", denunciaRoutes);
-
+//teste3
 // teste Tábata
 // Inicia servidor
 app.listen(PORT, () => {
