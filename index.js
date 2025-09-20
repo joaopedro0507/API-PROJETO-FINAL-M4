@@ -17,6 +17,7 @@ app.get("/", (req, res) => {
 app.use("/campanhas", campanhaRoutes);
 app.use("/denuncias", denunciaRoutes);
 
+// teste Tábata
 // Inicia servidor
 app.listen(PORT, () => {
   console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
