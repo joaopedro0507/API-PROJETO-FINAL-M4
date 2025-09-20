@@ -12,7 +12,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("🚀 API Antirracismo está online!");
 });
-
+//teste 2
 // Prefixos das rotas
 app.use("/campanhas", campanhaRoutes);
 app.use("/denuncias", denunciaRoutes);
