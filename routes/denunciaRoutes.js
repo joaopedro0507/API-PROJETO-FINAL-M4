@@ -1,11 +1,11 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const DenunciaController = require('../controllers/denunciaController').default;
+const { listarDenuncias, buscarDenuncia, criarDenuncia, deletarDenuncia } = require("../controllers/denunciaController");
 
-// Rotas CRUD
-router.get('/', DenunciaController.listar);
-router.get('/:id', DenunciaController.buscarPorId);
-router.post('/', DenunciaController.criar);
-router.delete('/:id', DenunciaController.deletar);
+// Rotas de denúncias
+router.get("/", listarDenuncias);
+router.get("/:id", buscarDenuncia);
+router.post("/", criarDenuncia);
+router.delete("/:id", deletarDenuncia);
 
 module.exports = router;

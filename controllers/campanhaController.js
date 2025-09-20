@@ -1,33 +1,35 @@
+// Dados mockados sobre campanhas contra o racismo
+let campanhas = [
+  { id: 1, nome: "Educação nas Escolas", descricao: "Promover palestras e materiais educativos", estado: "SP" },
+  { id: 2, nome: "Trabalho Justo", descricao: "Campanha para igualdade no ambiente corporativo", estado: "RJ" },
+  { id: 3, nome: "Respeito nas Universidades", descricao: "Projeto contra racismo em instituições de ensino", estado: "MG" }
+];
 
-const CampanhaAntirracismo = require("../models/Campanha.js"); 
+// Listar campanhas
+const listarCampanhas = (req, res) => {
+  res.status(200).json({
+    sucesso: true,
+    total: campanhas.length,
+    campanhas
+  });
+};
 
-// Array para simular um "banco de dados" temporário
-let denuncias = [];
-// Função para listar todas as denúncias
-const listarDenuncias = (req, res) => {
-    res.status(200).json({
-        sucesso: true,
-        total: denuncias.length,
-        denuncias
-    });
+// Criar nova campanha
+const criarCampanha = (req, res) => {
+  const { nome, descricao, estado } = req.body;
+  const novaCampanha = {
+    id: campanhas.length + 1,
+    nome,
+    descricao,
+    estado,
+    data: new Date().toLocaleString()
+  };
+  campanhas.push(novaCampanha);
+  res.status(201).json({
+    sucesso: true,
+    mensagem: "Campanha criada com sucesso!",
+    campanha: novaCampanha
+  });
 };
-// Função para criar uma nova denúncia
-const criarDenuncia = (req, res) => {
-    const { nome, descricao } = req.body;
-    const novaDenuncia = {
-        id: denuncias.length + 1,
-        nome,
-        descricao,
-        data: new Date().toLocaleString()
-    };
-    denuncias.push(novaDenuncia);
-    res.status(201).json({
-        sucesso: true,
-        mensagem: "Denúncia registrada com sucesso. Juntos contra o racismo!",
-        denuncia: novaDenuncia
-    });
-};
-module.exports = {
-    listarDenuncias,
-    criarDenuncia
-};
+
+module.exports = { listarCampanhas, criarCampanha };

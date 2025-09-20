@@ -1,25 +1,54 @@
-const DenunciaModel = require('../models/denuncia.js');
+// Dados mockados sobre denúncias de racismo por estado
+let denuncias = [
+  { id: 1, estado: "SP", descricao: "Discriminação em entrevista de emprego" },
+  { id: 2, estado: "RJ", descricao: "Ofensas raciais em transporte público" },
+  { id: 3, estado: "MG", descricao: "Racismo em ambiente escolar" }
+];
 
-class DenunciaController {
-  static listar(req, res) {
-    res.json(DenunciaModel.listar());
+// Listar todas as denúncias
+const listarDenuncias = (req, res) => {
+  res.status(200).json({
+    sucesso: true,
+    total: denuncias.length,
+    denuncias
+  });
+};
+
+// Buscar denúncia por ID
+const buscarDenuncia = (req, res) => {
+  const { id } = req.params;
+  const denuncia = denuncias.find(d => d.id == id);
+
+  if (!denuncia) {
+    return res.status(404).json({ sucesso: false, mensagem: "Denúncia não encontrada" });
   }
 
-  static buscarPorId(req, res) {
-    const denuncia = _buscarPorId(req.params.id);
-    if (!denuncia) return res.status(404).send("Denúncia não encontrada");
-    res.json(denuncia);
-  }
+  res.json({ sucesso: true, denuncia });
+};
 
-  static criar(req, res) {
-    const nova = _criar(req.body);
-    res.status(201).json(nova);
-  }
+// Criar nova denúncia
+const criarDenuncia = (req, res) => {
+  const { estado, descricao } = req.body;
+  const novaDenuncia = {
+    id: denuncias.length + 1,
+    estado,
+    descricao,
+    data: new Date().toLocaleString()
+  };
+  denuncias.push(novaDenuncia);
+  res.status(201).json({
+    sucesso: true,
+    mensagem: "Denúncia registrada com sucesso!",
+    denuncia: novaDenuncia
+  });
+};
 
-  static deletar(req, res) {
-    _deletar(req.params.id);
-    res.send("Denúncia removida com sucesso");
-  }
-}
+// Deletar denúncia
+const deletarDenuncia = (req, res) => {
+  const { id } = req.params;
+  denuncias = denuncias.filter(d => d.id != id);
 
-module.exports = DenunciaController;
+  res.json({ sucesso: true, mensagem: "Denúncia removida com sucesso" });
+};
+
+module.exports = { listarDenuncias, buscarDenuncia, criarDenuncia, deletarDenuncia };

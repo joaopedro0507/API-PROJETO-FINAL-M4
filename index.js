@@ -1,18 +1,23 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000; // Render define a porta
 
 // Importação das rotas
-const rotasCampanha = require('./routes/campanhaRoutes.js');
-const rotasDenuncias = require('./routes/denunciaRoutes.js');
+const campanhaRoutes = require("./routes/campanhaRoutes");
+const denunciaRoutes = require("./routes/denunciaRoutes");
 
 app.use(express.json());
 
-// Prefixos das rotas
-app.use('/campanha', rotasCampanha);
-app.use('/denuncias', rotasDenuncias);
-
-app.listen(port, () => {
-  console.log(`🚀 Servidor rodando em http://localhost:${port}`);
+// Rota raiz
+app.get("/", (req, res) => {
+  res.send("🚀 API Antirracismo está online!");
 });
 
+// Prefixos das rotas
+app.use("/campanhas", campanhaRoutes);
+app.use("/denuncias", denunciaRoutes);
+
+// Inicia servidor
+app.listen(PORT, () => {
+  console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
+});
