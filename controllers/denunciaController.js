@@ -2,8 +2,12 @@
 let denuncias = [
   { id: 1, estado: "SP", descricao: "Discriminação em entrevista de emprego" },
   { id: 2, estado: "RJ", descricao: "Ofensas raciais em transporte público" },
-  { id: 3, estado: "MG", descricao: "Racismo em ambiente escolar" }
+  { id: 3, estado: "MG", descricao: "Racismo em ambiente escolar" },
+  { id: 4, estado: "BA", descricao: "Comentários racistas em redes sociais" },
+  { id: 5, estado: "PR", descricao: "Negação de atendimento em estabelecimento comercial" },
+  { id: 6, estado: "DF", descricao: "Assédio racial em universidade pública" }
 ];
+
 
 // Listar todas as denúncias
 const listarDenuncias = (req, res) => {
