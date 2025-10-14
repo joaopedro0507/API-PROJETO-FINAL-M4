@@ -2,8 +2,12 @@
 let campanhas = [
   { id: 1, nome: "Educação nas Escolas", descricao: "Promover palestras e materiais educativos", estado: "SP" },
   { id: 2, nome: "Trabalho Justo", descricao: "Campanha para igualdade no ambiente corporativo", estado: "RJ" },
-  { id: 3, nome: "Respeito nas Universidades", descricao: "Projeto contra racismo em instituições de ensino", estado: "MG" }
+  { id: 3, nome: "Respeito nas Universidades", descricao: "Projeto contra racismo em instituições de ensino", estado: "MG" },
+  { id: 4, nome: "Cultura e Diversidade", descricao: "Incentivar espaços culturais inclusivos e representativos", estado: "BA" },
+  { id: 5, nome: "Esporte sem Racismo", descricao: "Campanha de conscientização em clubes e escolas de esporte", estado: "PR" },
+  { id: 6, nome: "Mídia Consciente", descricao: "Projeto para maior representatividade racial na TV e internet", estado: "DF" }
 ];
+
 
 // Listar campanhas
 const listarCampanhas = (req, res) => {
